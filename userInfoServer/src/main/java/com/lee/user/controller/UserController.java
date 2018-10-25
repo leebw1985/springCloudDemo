@@ -1,7 +1,7 @@
 package com.lee.user.controller;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,7 +11,8 @@ import com.lee.user.service.UserService;
 
 @RestController
 public class UserController {
-    Logger log = LoggerFactory.getLogger(UserController.class);
+    //Logger log = LoggerFactory.getLogger(UserController.class);
+    Logger logger = LogManager.getLogger(UserController.class.getName());
 
     @Autowired
     private UserService userService;
@@ -25,7 +26,7 @@ public class UserController {
     @GetMapping("/{id}")
     public UserInfo  findById(@PathVariable("id") String id) {
         UserInfo findOne = this.userService.getOne(id);
-        System.out.println("---" + findOne.toString());
+        logger.info("---" + findOne.toString());
         return findOne;
     }
 
@@ -40,7 +41,7 @@ public class UserController {
             e.printStackTrace();
         }
         UserInfo findOne = this.userService.getOne(time.toString());
-        System.out.println("---" + findOne.toString());
+        logger.info("---" + findOne.toString());
         return findOne;
     }
 }
