@@ -3,7 +3,6 @@ package com.lee.consumer.user.feign;
 
 import com.lee.consumer.user.entity.UserInfo;
 import com.lee.consumer.user.fallback.UserClientFallBack;
-import org.springframework.boot.autoconfigure.security.SecurityProperties;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -2,7 +2,7 @@ server:
   port: 8021
 spring:
   application:
-    name: consumer-server-demo
+    name: consumer-server
 eureka:
   client:
     serviceUrl:

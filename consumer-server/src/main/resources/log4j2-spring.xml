@@ -6,8 +6,8 @@
     -->
 <Configuration status="WARN" monitorInterval="30">
     <properties>
-        <property name="LOG_HOME">D:/logs/consumerserverLogs/</property>
-        <property name="FILE_NAME">consumerserver</property>
+        <property name="LOG_HOME">D:/logs/consumer-server/</property>
+        <property name="FILE_NAME">consumer-server</property>
     </properties>
 
     <Appenders> <!-- 常见的有三种子节点:Console、RollingFile、File -->
