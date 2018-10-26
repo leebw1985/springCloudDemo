@@ -1,0 +1,19 @@
+spring:
+  application:
+     name: user-server
+  profiles:
+     active: userDevB
+  cloud:
+     config:
+       discovery:
+         enabled: true #开启通过服务来访问Config Server的功能
+         service-id: config-server
+       profile: dev
+       label: master
+server:
+  port: 8002
+eureka:
+  client:
+     serviceUrl: http://localhost:8761/eureka/    # 指定注册中心的地址
+  instance:
+     preferIpAddress: true

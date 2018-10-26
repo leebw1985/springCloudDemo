@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true #开启通过服务来访问Config Server的功能
+        service-id: config-server
+      profile: dev
+      label: master
